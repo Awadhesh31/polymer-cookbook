@@ -1,0 +1,29 @@
+{
+  "hosting": {
+    "headers": [ {
+      "source" : "**/*",
+      "headers" : [ {
+        "key" : "Access-Control-Allow-Origin",
+        "value" : "*"
+      }]
+    }],
+    "public": "./",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/functions/node_modules/**",
+    ],
+    "rewrites": [
+      {
+        "source": "**/dynamicsamples/**",
+        "function": "getFile"
+      }
+    ]
+  },
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

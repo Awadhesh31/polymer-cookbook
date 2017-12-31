@@ -1,0 +1,12 @@
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow write: if true;
+    }
+  }
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read: if true;
+    }
+  }
+}

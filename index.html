@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Polymer Cookbook</title>
+    <script type="module" src="scripts/polymer-cookbook.js"></script>
+    <!-- styles and PWA crap go here -->
+    <style>
+      textarea, iframe {
+        display: block;
+        font-family: Courier New, Courier, monospace;
+        width: 100%;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <polymer-cookbook>
+        <textarea id="htmltextarea"></textarea>
+        <textarea id="javascripttextarea"></textarea>
+      <!--  <button id="writebutton">save user code</button> -->
+        <button id="refreshiframebutton">Render!</button>
+     <!-- <button id="loadbutton">load original samples</button> -->
+      <iframe id="iframe"></iframe>
+    </polymer-cookbook>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-storage.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDQJN62wXvYe1vthCZPufhijft3xNHtHNo",
+        authDomain: "polymer-cookbook.firebaseapp.com",
+        databaseURL: "https://polymer-cookbook.firebaseio.com",
+        projectId: "polymer-cookbook",
+        storageBucket: "polymer-cookbook.appspot.com",
+        messagingSenderId: "1045388692014"
+      };
+      firebase.initializeApp(config);
+      //var storage = firebase.storage();
+    </script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
